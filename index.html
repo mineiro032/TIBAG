@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+        const links = [
+            'https://api.whatsapp.com/send/?phone=5521996405499&text=oii%2C+vim+do+tiktok%21&type=phone_number&app_absent=0',
+            'https://api.whatsapp.com/send/?phone=5532991481604&text=oii%2C+vim+do+tiktok%21&type=phone_number&app_absent=0',
+            'https://api.whatsapp.com/send/?phone=5532991974854&text=oii%2C+vim+do+tiktok%21&type=phone_number&app_absent=0'
+        ];
+
+        function toggleLink() {
+            const randomIndex = Math.floor(Math.random() * links.length);
+            window.location.href = links[randomIndex];
+        }
+    </script>
+</head>
+<body>
+    <h1>CLIQUE ABAIXO PARA CONTINUAR...</h1>
+    <button onclick="toggleLink()">Continuar no WhatsApp</button>
+</body>
+</html>
